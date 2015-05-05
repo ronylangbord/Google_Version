@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background">
+
+    <com.example.trunch.TagsCompletionView
+        android:id="@+id/searchView"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="70dp"
+        android:layout_centerHorizontal="true"
+        android:background="@color/white"
+        android:hint="@string/food_prompt"
+        android:textColorHint="@color/orange"
+        android:imeOptions="actionDone"
+        android:textColor="#ffffbe01"
+        android:textSize="19sp"
+        android:inputType="text|textNoSuggestions|textMultiLine"
+        android:focusableInTouchMode="true"
+        />
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:minHeight="?attr/actionBarSize"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </android.support.v7.widget.Toolbar>
+
+        <ImageView
+            android:id="@+id/white_bar"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/bar"
+            android:visibility="visible"/>
+
+    <TextView
+        android:id="@+id/choose_a_rest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="200dp"
+        android:layout_centerHorizontal="true"
+        android:text="@string/choose_rest"
+        android:textColor="@color/white"
+        android:textSize="30dp"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone">
+
+    </TextView>
+
+
+    <com.example.trunch.HorizontialListView
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:descendantFocusability="blocksDescendants"
+        android:id="@+id/restContainer"
+        android:layout_alignParentBottom="true"
+        />
+
+
+</RelativeLayout>

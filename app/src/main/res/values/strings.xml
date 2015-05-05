@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Trunch</string>
+    <string name="action_settings">Trunch</string>
+    <string name="food_prompt">Cuisine or Restaurant </string>
+    <string name="main_question">What would you like to eat?</string>
+    <string name="mGlass">\uD83D\uDD0D</string>
+    <string name="pick_resturent">Choose a restaurant</string>
+    <string name="wait_for_trunch">Waiting for your TRUNCH...</string>
+    <string name="title_activity_second">SecondActivity</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="choose_rest">Choose a restaurant</string>
+</resources>

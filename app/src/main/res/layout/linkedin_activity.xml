@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background"
+    android:clickable="true">
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/logo_2"
+        android:layout_marginLeft="75dp"
+        android:layout_marginTop="1in"></ImageView>
+
+
+
+    <TextView
+        android:id="@+id/pckText"
+        android:background="@color/blue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/pckHashText"
+        android:background="@color/red"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"/>
+
+    <View
+        android:id="@+id/splash_screen_linkedin"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:background="@drawable/background"/>
+
+
+
+
+
+    <Button
+        android:id="@+id/linkedinButton"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:background="@drawable/linkedin_final"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="85dp"
+        android:layout_marginBottom="70dp"
+        android:paddingLeft="3dp"
+        android:paddingRight="3dp"
+        android:paddingTop="2dp"
+        android:paddingBottom="4dp"></Button>
+
+    <!--<Button-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Package Hash"-->
+        <!--android:id="@+id/hash_button"-->
+        <!--android:layout_marginTop="50dp"-->
+        <!--/>-->
+
+
+
+</RelativeLayout>

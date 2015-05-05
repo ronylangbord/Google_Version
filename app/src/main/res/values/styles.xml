@@ -1,0 +1,21 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat">
+        <item name="windowActionBar">false</item>
+    </style>
+
+    <style name="AppBaseTheme" parent="android:Theme.Holo.Light">
+        <item name="android:actionBarStyle">@style/BlueWhiteActionBarTheme</item>
+    </style>
+
+    <style name="BlueWhiteActionBarTheme" parent="AppBaseTheme">
+        <item name="android:background">#0089CD</item>
+    </style>
+
+    <style name="TrunchTheme" parent="android:Theme.Holo.Light">
+        <item name="android:background">@color/white</item>
+        <item name="background">@color/white</item>
+    </style>
+
+    </resources>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="150dp"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/text_show_great_choice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:textColor="@android:color/black"
+        android:textSize="22dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginBottom="50dp"
+        android:layout_marginLeft="28dp"
+        android:layout_alignParentBottom="true"
+        android:text="We'll let you know when you                             are getting your Trunch."
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="16dp"
+        />
+
+        <Button
+            android:id="@+id/ok_button"
+            android:layout_width="70dp"
+            android:layout_height="40dp"
+            android:clickable="true"
+            android:layout_marginBottom="15dp"
+            android:layout_marginRight="10dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="right"
+            android:text="OK"
+            android:textSize="16dp"
+            android:textColor="@color/material_blue_grey_800"
+            android:textStyle="bold" />
+
+
+</RelativeLayout>

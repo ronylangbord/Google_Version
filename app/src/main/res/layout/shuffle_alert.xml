@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="150dp"
+    android:background="@color/white"
+    >
+
+    <TextView
+        android:id="@+id/oh_no"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="20dp"
+        android:text="Oh no!"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@android:color/black"
+        android:textSize="20dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="No other matches found"
+        android:layout_marginBottom="10dp"
+        android:textSize="16dp"
+        />
+
+
+
+        <Button
+            android:id="@+id/ok_button_shuffle"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:background="@color/red"
+            android:clickable="true"
+            android:text="OK"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_gravity="bottom|right"
+            android:layout_marginBottom="30dp"
+            android:layout_marginRight="25dp"
+            />
+
+        <Button
+            android:id="@+id/start_over_button"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="30dp"
+            android:background="@android:color/holo_green_light"
+            android:clickable="true"
+            android:text="start over"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_marginLeft="25dp"/>
+
+
+</FrameLayout>
