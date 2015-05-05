@@ -1,20 +1,14 @@
-package com.example.trunch;
+package com.milab.trunch;
 
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.content.pm.PackageInfo;
-import android.content.pm.PackageManager;
-import android.content.pm.Signature;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.provider.Settings;
-import android.util.Base64;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -33,8 +27,6 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
-import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 import java.util.Map;
 

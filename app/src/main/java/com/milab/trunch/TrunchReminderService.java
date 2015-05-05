@@ -1,4 +1,4 @@
-package com.example.trunch;
+package com.milab.trunch;
 
 import android.app.NotificationManager;
 import android.app.PendingIntent;
@@ -9,7 +9,6 @@ import android.graphics.Color;
 import android.media.RingtoneManager;
 import android.net.Uri;
 import android.support.v4.app.NotificationCompat;
-import android.util.Log;
 
 /**
  * Created by or on 4/4/2015.

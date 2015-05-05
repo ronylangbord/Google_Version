@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/background">
 
-    <com.example.trunch.TagsCompletionView
+    <com.milab.trunch.TagsCompletionView
         android:id="@+id/searchView"
         android:layout_width="300dp"
         android:layout_height="40dp"
@@ -52,7 +52,7 @@
     </TextView>
 
 
-    <com.example.trunch.HorizontialListView
+    <com.milab.trunch.HorizontialListView
         android:layout_width="wrap_content"
         android:layout_height="200dp"
         android:descendantFocusability="blocksDescendants"

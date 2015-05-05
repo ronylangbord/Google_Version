@@ -1,4 +1,4 @@
-package com.example.trunch;
+package com.milab.trunch;
 
 import android.app.AlarmManager;
 import android.app.PendingIntent;

@@ -1,4 +1,4 @@
-package com.example.trunch;
+package com.milab.trunch;
 
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;

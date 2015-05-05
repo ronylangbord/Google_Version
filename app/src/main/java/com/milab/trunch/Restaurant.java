@@ -1,4 +1,4 @@
-package com.example.trunch;
+package com.milab.trunch;
 
 import com.fasterxml.jackson.annotation.JsonAnyGetter;
 import com.fasterxml.jackson.annotation.JsonAnySetter;

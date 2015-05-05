@@ -1,4 +1,4 @@
-package com.example.trunch;
+package com.milab.trunch;
 
 import android.view.inputmethod.InputMethodManager;
 import android.widget.ArrayAdapter;

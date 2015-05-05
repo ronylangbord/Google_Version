@@ -1,4 +1,4 @@
-package com.example.trunch;
+package com.milab.trunch;
 
 import android.app.ActionBar;
 import android.app.Activity;
@@ -33,7 +33,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.example.trunch.R.id.white_bar;
+import static com.milab.trunch.R.id.white_bar;
 
 
 public class SecondActivity extends ActionBarActivity implements TokenCompleteTextView.TokenListener {

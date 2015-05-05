@@ -1,4 +1,4 @@
-package com.example.trunch;
+package com.milab.trunch;
 
 import android.util.Log;
 
@@ -10,8 +10,6 @@ import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.impl.client.DefaultHttpClient;
-import org.apache.http.params.DefaultedHttpParams;
-import org.apache.http.params.HttpParams;
 
 import java.io.BufferedReader;
 import java.io.IOException;
