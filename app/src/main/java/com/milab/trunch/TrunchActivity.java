@@ -49,7 +49,6 @@ public class TrunchActivity extends ActionBarActivity {
 
         mObjectMapper = new ObjectMapper();
 
-
         restName = getIntent().getStringExtra("restName");
         trunchersString = getIntent().getStringExtra("trunchers");
         mUser = (User) getIntent().getParcelableExtra("user");
@@ -81,11 +80,12 @@ public class TrunchActivity extends ActionBarActivity {
         truncher2Name = trunchers[1].getFirstName();
         chosenRest = (ImageView) findViewById(R.id.restaurant);
 
+
         truncher1des = (TextView) findViewById(R.id.truncher1text);
         truncher2des = (TextView) findViewById(R.id.truncher2text);
 
-        truncher1des.setText(truncher1Name);
-        truncher2des.setText(truncher2Name);
+        truncher1des.setText(truncher1Name + " " + trunchers[0].getHeadline());
+        truncher2des.setText(truncher2Name + " " + trunchers[1].getHeadline());
 
         Picasso.with(this).load(truncher1Url).into(truncher1);
         Picasso.with(this).load(truncher2Url).into(truncher2);
@@ -97,5 +97,4 @@ public class TrunchActivity extends ActionBarActivity {
         TrunchDialogClass trunchDialog = new TrunchDialogClass(this, restName, trunchers);
         trunchDialog.show();
     }
-
 }

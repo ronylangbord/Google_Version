@@ -4,11 +4,17 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
+import android.content.pm.Signature;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.provider.Settings;
+import android.util.Base64;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -27,6 +33,8 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 import java.util.Map;
 
@@ -47,7 +55,7 @@ public class LinkedinConnectActivity extends Activity{
             + "/v1/people/~:(first-name," + "last-name,headline,picture-url)?format=json";
     private static final String USER_CONNECT_URL = "http://rony.milab.idc.ac.il/user_connect.php";
     private static final String TAG = MainActivity.class.getSimpleName();
-    public static final String GET_PACKAGE_HASH = "com.example.trunch";
+    public static final String GET_PACKAGE_HASH = "com.milab.trunch";
 
     //=========================================
     //				Fields
@@ -77,29 +85,29 @@ public class LinkedinConnectActivity extends Activity{
         mSplashScreen = findViewById(R.id.splash_screen_linkedin);
 
         //Compute application package and hash
-//        Button liShowPckHashButton = (Button) findViewById(R.id.hash_button);
-//        liShowPckHashButton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                try {
-//                    PackageInfo info = getPackageManager().getPackageInfo(
-//                            GET_PACKAGE_HASH,
-//                            PackageManager.GET_SIGNATURES);
-//                    for (Signature signature : info.signatures) {
-//                        MessageDigest md = MessageDigest.getInstance("SHA");
-//                        md.update(signature.toByteArray());
-//
-//                        ((TextView) findViewById(R.id.pckText)).setText(info.packageName);
-//
-//                        ((TextView) findViewById(R.id.pckHashText)).setText(Base64.encodeToString(md.digest(), Base64.NO_WRAP));
-//                    }
-//                } catch (PackageManager.NameNotFoundException e) {
-//                    Log.d(TAG, e.getMessage(), e);
-//                } catch (NoSuchAlgorithmException e) {
-//                    Log.d(TAG, e.getMessage(), e);
-//                }
-//            }
-//        });
+        Button liShowPckHashButton = (Button) findViewById(R.id.hash_button);
+        liShowPckHashButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                try {
+                    PackageInfo info = getPackageManager().getPackageInfo(
+                            GET_PACKAGE_HASH,
+                            PackageManager.GET_SIGNATURES);
+                    for (Signature signature : info.signatures) {
+                        MessageDigest md = MessageDigest.getInstance("SHA");
+                        md.update(signature.toByteArray());
+
+                        ((TextView) findViewById(R.id.pckText)).setText(info.packageName);
+
+                        ((TextView) findViewById(R.id.pckHashText)).setText(Base64.encodeToString(md.digest(), Base64.NO_WRAP));
+                    }
+                } catch (PackageManager.NameNotFoundException e) {
+                    Log.d(TAG, e.getMessage(), e);
+                } catch (NoSuchAlgorithmException e) {
+                    Log.d(TAG, e.getMessage(), e);
+                }
+            }
+        });
 
 
 

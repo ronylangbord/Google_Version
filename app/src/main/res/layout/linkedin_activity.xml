@@ -53,13 +53,13 @@
         android:paddingTop="2dp"
         android:paddingBottom="4dp"></Button>
 
-    <!--<Button-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:text="Package Hash"-->
-        <!--android:id="@+id/hash_button"-->
-        <!--android:layout_marginTop="50dp"-->
-        <!--/>-->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Package Hash"
+        android:id="@+id/hash_button"
+        android:layout_marginTop="50dp"
+        />
 
 
 
