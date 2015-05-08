@@ -37,9 +37,12 @@ public class MainActivity extends ActionBarActivity {
 
     private static final long MIN_TIME_BETWEEN_JSON_DOWNLOAD = 1000 * 60 * 60 * 24; //one day
     private static final String SHARED_PREF_NAME = "com.package.SHARED_PREF_NAME";
-    private static final String urlGetTags = "http://www.mocky.io/v2/54ba8366e7c226ad0b446eff";
-    private static final String urlGetRest = "http://www.mocky.io/v2/552421c1cb84087608d88880";
-    private static final String urlGetUser = "http://www.mocky.io/v2/552e883749f6abea07a3586d";
+    private static final String urlGetTags = "http://www.mocky.io/v2/554bbd83b6a0d8b91ad4d8fa";
+    private static final String urlGetRest = "http://www.mocky.io/v2/554bc22cb6a0d8401bd4d900";
+    private static final String urlGetUser = "http://rony.milab.idc.ac.il/user_connect.php";
+//    private static final String urlGetTags = "http://www.mocky.io/v2/54ba8366e7c226ad0b446eff";
+//    private static final String urlGetRest = "http://www.mocky.io/v2/552421c1cb84087608d88880";
+//    private static final String urlGetUser = "http://www.mocky.io/v2/552e883749f6abea07a3586d";
 
     //=========================================
     //				Fields

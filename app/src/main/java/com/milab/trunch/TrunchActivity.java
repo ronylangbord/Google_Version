@@ -8,7 +8,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.squareup.picasso.Picasso;
 
 import java.io.IOException;
 
@@ -84,12 +83,12 @@ public class TrunchActivity extends ActionBarActivity {
         truncher1des = (TextView) findViewById(R.id.truncher1text);
         truncher2des = (TextView) findViewById(R.id.truncher2text);
 
-        truncher1des.setText(truncher1Name + " " + trunchers[0].getHeadline());
-        truncher2des.setText(truncher2Name + " " + trunchers[1].getHeadline());
+       // truncher1des.setText(truncher1Name + " " + trunchers[0].getHeadline());
+        //truncher2des.setText(truncher2Name + " " + trunchers[1].getHeadline());
 
-        Picasso.with(this).load(truncher1Url).into(truncher1);
-        Picasso.with(this).load(truncher2Url).into(truncher2);
-        Picasso.with(this).load("http://mimamoo.com/images/stories/jreviews/35655_giraffe_1329198005.JPG").into(chosenRest);
+        ///Picasso.with(this).load(truncher1Url).into(truncher1);
+        //Picasso.with(this).load(truncher2Url).into(truncher2);
+       // Picasso.with(this).load("http://mimamoo.com/images/stories/jreviews/35655_giraffe_1329198005.JPG").into(chosenRest);
 
     }
 
