@@ -11,19 +11,19 @@
         android:theme="@style/AppTheme"
         >
         <activity
-            android:name="com.milab.trunch.MainActivity"
+            android:name=".activities.MainActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.milab.trunch.LinkedinConnectActivity" />
-        <activity android:name="com.milab.trunch.SecondActivity" />
-        <activity android:name="com.milab.trunch.TrunchActivity" />
+        <activity android:name=".activities.LinkedinConnectActivity" />
+        <activity android:name=".activities.SecondActivity" />
+        <activity android:name=".activities.TrunchActivity" />
 
-        <receiver android:name="com.milab.trunch.TrunchCheckerService" />
-        <receiver android:name="com.milab.trunch.TrunchReminderService" />
+        <receiver android:name=".services.TrunchCheckerService" />
+        <receiver android:name=".services.TrunchReminderService" />
 
     </application>
 

@@ -8,6 +8,13 @@
     <string name="wait_for_trunch">Waiting for your TRUNCH...</string>
     <string name="title_activity_second">SecondActivity</string>
 
-    <string name="hello_world">Hello world!</string>
+    <string name="retry">Retry</string>
+
     <string name="choose_rest">Choose a restaurant</string>
+
+    <string name="network_unavailable_title">Network Unavailable!</string>
+    <string name="network_unavailable_message">Sorry there was an error getting data from the Internet.</string>
+
+
+
 </resources>
