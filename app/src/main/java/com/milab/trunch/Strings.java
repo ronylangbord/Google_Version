@@ -11,6 +11,7 @@ public class Strings {
     public static final String android_id = "android_id";
     public static final String rest = "rest";
     public static final String restName = "restName";
+    public static final String restId = "restId";
     public static final String trunchers = "trunchers";
 
 }

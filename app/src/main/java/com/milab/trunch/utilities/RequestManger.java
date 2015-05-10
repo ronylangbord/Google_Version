@@ -30,7 +30,7 @@ public class RequestManger {
         HttpGet httpget = new HttpGet(url);
         // Execute the request
         HttpResponse response;
-        String result = "";
+        String result = null;
         try {
             response = httpclient.execute(httpget);
             // Examine the response status
@@ -46,6 +46,9 @@ public class RequestManger {
                 // A Simple JSON Response Read
                 InputStream instream = entity.getContent();
                 result = convertStreamToString(instream);
+                if (result.startsWith("null")) {
+                    result = null;
+                }
                 // now you have the string representation of the HTML request
                 instream.close();
             }
@@ -68,7 +71,7 @@ public class RequestManger {
         }
         // Execute the request
         HttpResponse response;
-        String result = "";
+        String result = null;
         try {
             response = httpclient.execute(httpPost);
             // Examine the response status
@@ -84,6 +87,9 @@ public class RequestManger {
                 // A Simple JSON Response Read
                 InputStream instream = entity.getContent();
                 result = convertStreamToString(instream);
+                if (result.startsWith("null")) {
+                    result = null;
+                }
                 // now you have the string representation of the HTML request
                 instream.close();
             }
