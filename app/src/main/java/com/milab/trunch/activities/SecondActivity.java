@@ -221,9 +221,10 @@ public class SecondActivity extends ActionBarActivity implements TokenCompleteTe
         });
     }
 
-            //=========================================
-            //	            TokenView
-            //=========================================
+
+    //=========================================
+    //	            TokenView
+    //=========================================
 
             private void initTokenView() {
                 foodTagAdapter = new FilteredArrayAdapter<FoodTag>(this, R.layout.food_tag_layout, foodTags) {

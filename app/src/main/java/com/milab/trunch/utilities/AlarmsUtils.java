@@ -53,14 +53,23 @@ public class AlarmsUtils {
         AlarmManager mTrunchReminderAlarm = (AlarmManager) context.getApplicationContext().
                 getSystemService(Context.ALARM_SERVICE);
         Intent alarmIntent = new Intent(context, TrunchReminderService.class);
-        PendingIntent mPendingReminderIntent = PendingIntent.getBroadcast(context, 0, alarmIntent, 0);
 
-        Calendar alarmStartTime = Calendar.getInstance();
-        alarmStartTime.setTimeInMillis(System.currentTimeMillis());
-        alarmStartTime.set(Calendar.HOUR_OF_DAY, HOUR_OF_REMINDER);
-        alarmStartTime.set(Calendar.MINUTE, MINUTE_OF_REMINDER);
-        mTrunchReminderAlarm.setRepeating(AlarmManager.RTC_WAKEUP, alarmStartTime.getTimeInMillis(),
-                TWENTY_FOUR_HOURS, mPendingReminderIntent);
+        // Check if the alarm is already running
+        boolean alarmUp = (PendingIntent.getBroadcast(context, 0,
+                alarmIntent,PendingIntent.FLAG_NO_CREATE) != null);
+
+        if (! alarmUp) {
+
+            PendingIntent mPendingReminderIntent = PendingIntent.getBroadcast(context, 0,
+                    alarmIntent, PendingIntent.FLAG_CANCEL_CURRENT);
+
+            Calendar alarmStartTime = Calendar.getInstance();
+            alarmStartTime.setTimeInMillis(System.currentTimeMillis());
+            alarmStartTime.set(Calendar.HOUR_OF_DAY, HOUR_OF_REMINDER);
+            alarmStartTime.set(Calendar.MINUTE, MINUTE_OF_REMINDER);
+            mTrunchReminderAlarm.setRepeating(AlarmManager.RTC_WAKEUP, alarmStartTime.getTimeInMillis(),
+                    TWENTY_FOUR_HOURS, mPendingReminderIntent);
+        }
     }
 
 

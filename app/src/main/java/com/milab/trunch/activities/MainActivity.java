@@ -43,6 +43,9 @@ public class MainActivity extends ActionBarActivity {
     //=========================================
 
     private static final long MIN_TIME_BETWEEN_JSON_DOWNLOAD = 1000 * 60 * 60 * 24; //one day
+
+
+
     private static final int RETRY_GET_USER = 0;
     private static final int RETRY_GET_DATA = 1;
 //    private static final String urlGetTags = "http://www.mocky.io/v2/54ba8366e7c226ad0b446eff";
@@ -167,10 +170,13 @@ public class MainActivity extends ActionBarActivity {
                 Intent intent = new Intent(getApplicationContext(), SecondActivity.class);
                 intent.putExtra(Strings.user, mUser);
                 startActivity(intent);
+                finish();
             }
         });
 
     }
+
+
 
     private void downloadJSON() {
         // create asyncTask which in on doInBackground makes an HTTPRequest to server to get JSON

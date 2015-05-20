@@ -2,6 +2,7 @@ package com.milab.trunch.components;
 
 import android.app.Activity;
 import android.app.Dialog;
+import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
@@ -71,5 +72,6 @@ public class CustomDialogClass extends Dialog implements View.OnClickListener {
     //sends a notification for the alarm.
     private void waitForTrunch(String restName, View view) {
         AlarmsUtils.startCheckerAlarm(view, this.getContext(), restName);
+
     }
 }
