@@ -2,12 +2,15 @@ package com.milab.trunch.components;
 
 import android.app.Activity;
 import android.app.Dialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
 import com.milab.trunch.R;
+import com.milab.trunch.activities.MainActivity;
+import com.milab.trunch.activities.SecondActivity;
 
 /**
  * Created by ronylangbord on 4/13/15.
@@ -49,6 +52,9 @@ public class ShuffleDialogClass extends Dialog implements View.OnClickListener {
                 break;
             case R.id.start_over_button:
                 dismiss();
+                Intent intent = new Intent(activity.getApplicationContext(), MainActivity.class);
+                activity.startActivity(intent);
+                activity.finish();
                 break;
             default:
                 break;

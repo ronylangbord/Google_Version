@@ -13,6 +13,7 @@ import com.milab.trunch.Strings;
 import com.milab.trunch.instances.User;
 import com.milab.trunch.components.ShuffleDialogClass;
 import com.milab.trunch.components.TrunchDialogClass;
+import com.squareup.picasso.Picasso;
 
 import java.io.IOException;
 
@@ -32,15 +33,13 @@ public class TrunchActivity extends ActionBarActivity {
     Button shuffleButton;
     User mUser;
     ObjectMapper mObjectMapper;
-    TextView truncher1des;
-    TextView truncher2des;
-    private ImageView truncher1;
-    private ImageView truncher2;
-    private ImageView chosenRest;
-    private String truncher1Url;
-    private String truncher2Url;
-    private String truncher1Name;
-    private String truncher2Name;
+    TextView m_FirstTruncherText;
+    TextView m_SecondTruncherText;
+    private ImageView m_FirstTruncherImage;
+    private ImageView m_SecondTruncherImage;
+    private ImageView m_ChosenRest;
+    private String m_FirstTruncherImageUrl;
+    private String m_SecondTruncherImageUrl;
 
 
     //=========================================
@@ -61,12 +60,11 @@ public class TrunchActivity extends ActionBarActivity {
         User[] trunchers = new User[0];
         try {
             trunchers = mObjectMapper.readValue(trunchersString, User[].class);
-            //mUser = mObjectMapper.readValue(j)
         } catch (IOException e) {
             e.printStackTrace();
         }
 
-        showTrunchDialog(trunchers, restName);
+        //showTrunchDialog(trunchers, restName);
 
         shuffleButton = (Button) findViewById(R.id.shuffle_button);
         shuffleButton.setOnClickListener(new View.OnClickListener() {
@@ -77,17 +75,34 @@ public class TrunchActivity extends ActionBarActivity {
             }
         });
 
-        truncher1 = (ImageView) findViewById(R.id.truncher1);
-        truncher1Url = trunchers[0].getPictureUrl();
-        truncher1Name = trunchers[0].getFirstName();
-        truncher2 = (ImageView) findViewById(R.id.truncher2);
-        truncher2Url = trunchers[1].getPictureUrl();
-        truncher2Name = trunchers[1].getFirstName();
-        chosenRest = (ImageView) findViewById(R.id.restaurant);
+        m_FirstTruncherImage = (ImageView) findViewById(R.id.truncher1);
+        m_SecondTruncherImage = (ImageView) findViewById(R.id.truncher2);
+        m_ChosenRest = (ImageView) findViewById(R.id.restaurant);
+
+        m_FirstTruncherImageUrl = trunchers[0].getPictureUrl();
+        m_SecondTruncherImageUrl = trunchers[1].getPictureUrl();
+
+        Picasso.with(this).load(m_FirstTruncherImageUrl).into(m_FirstTruncherImage);
+        Picasso.with(this).load(m_SecondTruncherImageUrl).into(m_SecondTruncherImage);
+
+        String imgName = restName.toLowerCase().replaceAll(" ", "_");
+        int path = getResources().getIdentifier(imgName, "drawable", getPackageName());
+        m_ChosenRest.setImageResource(path);
 
 
-        truncher1des = (TextView) findViewById(R.id.truncher1text);
-        truncher2des = (TextView) findViewById(R.id.truncher2text);
+        String firstTruncherStr = trunchers[0].getFirstName() + " "
+                + trunchers[0].getLastName()+ "\n" + trunchers[0].getHeadline();
+        String secondTruncherStr = trunchers[1].getFirstName() + " "
+                + trunchers[1].getLastName() + "\n" + trunchers[1].getHeadline();
+
+        m_FirstTruncherText = (TextView) findViewById(R.id.truncher1text);
+        m_FirstTruncherText.setText(firstTruncherStr);
+        m_SecondTruncherText = (TextView) findViewById(R.id.truncher2text);
+        m_SecondTruncherText.setText(secondTruncherStr);
+
+
+
+
 
        // truncher1des.setText(truncher1Name + " " + trunchers[0].getHeadline());
         //truncher2des.setText(truncher2Name + " " + trunchers[1].getHeadline());

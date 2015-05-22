@@ -49,7 +49,6 @@
 
     <ImageView
         android:id="@+id/truncher1"
-        android:background="@drawable/avivush_truncher2"
         android:layout_width="80dp"
         android:layout_height="90dp"
         android:layout_marginTop="120dp"
@@ -69,7 +68,6 @@
 
     <ImageView
         android:id="@+id/truncher2"
-        android:background="@drawable/talya_truncher3"
         android:layout_width="80dp"
         android:layout_height="90dp"
         android:layout_marginTop="120dp"
@@ -89,7 +87,6 @@
 
     <ImageView
         android:id="@+id/restaurant"
-        android:background="@drawable/chop_chop"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="270dp"
