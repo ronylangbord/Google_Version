@@ -1,4 +1,4 @@
-package com.milab.trunch.components;
+package com.trunch.trunch.components;
 
 import android.app.Activity;
 import android.app.Dialog;
@@ -10,8 +10,8 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.milab.trunch.R;
-import com.milab.trunch.instances.User;
+import com.trunch.trunch.R;
+import com.trunch.trunch.instances.User;
 import com.squareup.picasso.Picasso;
 
 /**

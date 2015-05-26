@@ -1,11 +1,11 @@
-package com.milab.trunch.utilities;
+package com.trunch.trunch.utilities;
 
 import android.view.inputmethod.InputMethodManager;
 import android.widget.ArrayAdapter;
 
-import com.milab.trunch.components.TagsCompletionView;
-import com.milab.trunch.instances.FoodTag;
-import com.milab.trunch.instances.Restaurant;
+import com.trunch.trunch.components.TagsCompletionView;
+import com.trunch.trunch.instances.FoodTag;
+import com.trunch.trunch.instances.Restaurant;
 
 import java.util.ArrayList;
 import java.util.List;

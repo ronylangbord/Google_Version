@@ -1,4 +1,4 @@
-package com.milab.trunch.activities;
+package com.trunch.trunch.activities;
 
 import android.app.Activity;
 import android.content.Context;
@@ -20,11 +20,11 @@ import com.linkedin.platform.listeners.ApiListener;
 import com.linkedin.platform.listeners.ApiResponse;
 import com.linkedin.platform.listeners.AuthListener;
 import com.linkedin.platform.utils.Scope;
-import com.milab.trunch.R;
-import com.milab.trunch.Urls;
-import com.milab.trunch.utilities.RequestManger;
-import com.milab.trunch.utilities.SharedPrefUtils;
-import com.milab.trunch.instances.User;
+import com.trunch.trunch.R;
+import com.trunch.trunch.Urls;
+import com.trunch.trunch.utilities.RequestManger;
+import com.trunch.trunch.utilities.SharedPrefUtils;
+import com.trunch.trunch.instances.User;
 
 import org.apache.http.NameValuePair;
 import org.apache.http.message.BasicNameValuePair;

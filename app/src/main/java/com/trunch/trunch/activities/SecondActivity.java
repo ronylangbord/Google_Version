@@ -1,4 +1,4 @@
-package com.milab.trunch.activities;
+package com.trunch.trunch.activities;
 
 import android.app.ActionBar;
 import android.app.Activity;
@@ -24,17 +24,17 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.milab.trunch.Strings;
-import com.milab.trunch.instances.FoodTag;
-import com.milab.trunch.R;
-import com.milab.trunch.instances.Restaurant;
-import com.milab.trunch.utilities.SharedPrefUtils;
-import com.milab.trunch.utilities.TokenViewUtils;
-import com.milab.trunch.services.TrunchCheckerService;
-import com.milab.trunch.instances.User;
-import com.milab.trunch.components.CustomDialogClass;
-import com.milab.trunch.components.HorizontialListView;
-import com.milab.trunch.components.TagsCompletionView;
+import com.trunch.trunch.Strings;
+import com.trunch.trunch.instances.FoodTag;
+import com.trunch.trunch.R;
+import com.trunch.trunch.instances.Restaurant;
+import com.trunch.trunch.utilities.SharedPrefUtils;
+import com.trunch.trunch.utilities.TokenViewUtils;
+import com.trunch.trunch.services.TrunchCheckerService;
+import com.trunch.trunch.instances.User;
+import com.trunch.trunch.components.CustomDialogClass;
+import com.trunch.trunch.components.HorizontialListView;
+import com.trunch.trunch.components.TagsCompletionView;
 import com.squareup.picasso.Picasso;
 import com.squareup.picasso.Target;
 import com.tokenautocomplete.FilteredArrayAdapter;
@@ -44,7 +44,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.milab.trunch.R.id.white_bar;
+import static com.trunch.trunch.R.id.white_bar;
 
 
 public class SecondActivity extends ActionBarActivity implements TokenCompleteTextView.TokenListener {

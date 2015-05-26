@@ -1,16 +1,14 @@
-package com.milab.trunch.components;
+package com.trunch.trunch.components;
 
 import android.app.Activity;
 import android.app.Dialog;
-import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.milab.trunch.R;
-import com.milab.trunch.activities.SecondActivity;
+import com.trunch.trunch.R;
 
 /**
  * Created by ronylangbord on 4/10/15.

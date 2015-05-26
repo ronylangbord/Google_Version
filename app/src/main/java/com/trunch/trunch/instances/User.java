@@ -1,4 +1,4 @@
-package com.milab.trunch.instances;
+package com.trunch.trunch.instances;
 
 
 import android.os.Parcel;

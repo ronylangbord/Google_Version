@@ -1,4 +1,4 @@
-package com.milab.trunch.activities;
+package com.trunch.trunch.activities;
 
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
@@ -8,11 +8,11 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.milab.trunch.R;
-import com.milab.trunch.Strings;
-import com.milab.trunch.instances.User;
-import com.milab.trunch.components.ShuffleDialogClass;
-import com.milab.trunch.components.TrunchDialogClass;
+import com.trunch.trunch.R;
+import com.trunch.trunch.Strings;
+import com.trunch.trunch.instances.User;
+import com.trunch.trunch.components.ShuffleDialogClass;
+import com.trunch.trunch.components.TrunchDialogClass;
 import com.squareup.picasso.Picasso;
 
 import java.io.IOException;

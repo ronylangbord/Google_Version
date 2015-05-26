@@ -1,4 +1,4 @@
-package com.milab.trunch.utilities;
+package com.trunch.trunch.utilities;
 
 import android.util.Log;
 

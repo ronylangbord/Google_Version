@@ -1,9 +1,9 @@
-package com.milab.trunch.instances;
+package com.trunch.trunch.instances;
 
 import android.os.Parcel;
 import android.os.Parcelable;
 
-import com.milab.trunch.Strings;
+import com.trunch.trunch.Strings;
 
 /**
  * Created by or on 4/3/2015.

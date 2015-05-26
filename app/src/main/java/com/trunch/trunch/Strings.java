@@ -1,4 +1,4 @@
-package com.milab.trunch;
+package com.trunch.trunch;
 
 /**
  * Created by or on 5/9/2015.

@@ -1,4 +1,4 @@
-package com.milab.trunch;
+package com.trunch.trunch;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

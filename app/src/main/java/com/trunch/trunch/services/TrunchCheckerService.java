@@ -1,4 +1,4 @@
-package com.milab.trunch.services;
+package com.trunch.trunch.services;
 
 import android.app.NotificationManager;
 import android.app.PendingIntent;
@@ -12,13 +12,13 @@ import android.net.Uri;
 import android.os.AsyncTask;
 import android.support.v4.app.NotificationCompat;
 
-import com.milab.trunch.R;
-import com.milab.trunch.Strings;
-import com.milab.trunch.Urls;
-import com.milab.trunch.utilities.RequestManger;
-import com.milab.trunch.utilities.SharedPrefUtils;
-import com.milab.trunch.activities.SecondActivity;
-import com.milab.trunch.activities.TrunchActivity;
+import com.trunch.trunch.R;
+import com.trunch.trunch.Strings;
+import com.trunch.trunch.Urls;
+import com.trunch.trunch.utilities.RequestManger;
+import com.trunch.trunch.utilities.SharedPrefUtils;
+import com.trunch.trunch.activities.SecondActivity;
+import com.trunch.trunch.activities.TrunchActivity;
 
 import org.apache.http.NameValuePair;
 import org.apache.http.message.BasicNameValuePair;
@@ -64,7 +64,7 @@ public class TrunchCheckerService extends BroadcastReceiver {
 
     private void showNotification(Context context) {
         mBuilder = new NotificationCompat.Builder(context).setSmallIcon(R.drawable.trunch_logo_small)
-                 .setContentTitle("You got Trunch!").setContentText("find out who are you eating with");
+                 .setContentTitle("You have a Trunch!").setContentText("Find out who you are eating lunch with.");
         // The PendingIntent to launch our activity if the user selects this
         // notification
         mNotificationPendingIntent = PendingIntent.getActivity(context, 0,

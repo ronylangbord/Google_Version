@@ -1,4 +1,4 @@
-package com.milab.trunch.components;
+package com.trunch.trunch.components;
 
 import android.content.Context;
 import android.database.DataSetObserver;

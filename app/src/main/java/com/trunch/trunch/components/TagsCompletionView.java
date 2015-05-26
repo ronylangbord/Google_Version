@@ -1,4 +1,4 @@
-package com.milab.trunch.components;
+package com.trunch.trunch.components;
 
 import android.app.Activity;
 import android.content.Context;
@@ -9,9 +9,9 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.milab.trunch.instances.FoodTag;
-import com.milab.trunch.R;
-import com.milab.trunch.Strings;
+import com.trunch.trunch.instances.FoodTag;
+import com.trunch.trunch.R;
+import com.trunch.trunch.Strings;
 import com.tokenautocomplete.TokenCompleteTextView;
 
 /**

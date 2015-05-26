@@ -1,4 +1,4 @@
-package com.milab.trunch.services;
+package com.trunch.trunch.services;
 
 import android.app.NotificationManager;
 import android.app.PendingIntent;
@@ -10,8 +10,8 @@ import android.media.RingtoneManager;
 import android.net.Uri;
 import android.support.v4.app.NotificationCompat;
 
-import com.milab.trunch.R;
-import com.milab.trunch.activities.MainActivity;
+import com.trunch.trunch.R;
+import com.trunch.trunch.activities.MainActivity;
 
 /**
  * Created by or on 4/4/2015.
@@ -35,7 +35,7 @@ public class TrunchReminderService extends BroadcastReceiver {
 
     private void showNotification(Context context) {
         mBuilder = new NotificationCompat.Builder(context).setSmallIcon(R.drawable.trunch_logo_small)
-                .setContentTitle("Its Trunch time!").setContentText("Have you decided what to eat already?");
+                .setContentTitle("It's Trunch time!").setContentText("Have you decided what to eat for lunch?");
         // The PendingIntent to launch our activity if the user selects this
         // notification
         mNotificationPendingIntent = PendingIntent.getActivity(context, 0,
@@ -51,6 +51,5 @@ public class TrunchReminderService extends BroadcastReceiver {
         mNotifyMgr = (NotificationManager) context.getApplicationContext()
                 .getSystemService(Context.NOTIFICATION_SERVICE);
         mNotifyMgr.notify(mNotificationId, mBuilder.build());
-
     }
 }

@@ -1,4 +1,4 @@
-package com.milab.trunch.utilities;
+package com.trunch.trunch.utilities;
 
 import android.app.AlarmManager;
 import android.app.PendingIntent;
@@ -7,8 +7,8 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.view.View;
 
-import com.milab.trunch.services.TrunchCheckerService;
-import com.milab.trunch.services.TrunchReminderService;
+import com.trunch.trunch.services.TrunchCheckerService;
+import com.trunch.trunch.services.TrunchReminderService;
 
 import java.util.Calendar;
 

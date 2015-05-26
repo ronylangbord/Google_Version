@@ -1,4 +1,4 @@
-package com.milab.trunch.activities;
+package com.trunch.trunch.activities;
 
 import android.app.AlertDialog;
 import android.content.Context;
@@ -20,13 +20,13 @@ import android.widget.SearchView;
 import android.widget.TextView;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.milab.trunch.R;
-import com.milab.trunch.Strings;
-import com.milab.trunch.Urls;
-import com.milab.trunch.utilities.RequestManger;
-import com.milab.trunch.utilities.SharedPrefUtils;
-import com.milab.trunch.instances.User;
-import com.milab.trunch.utilities.AlarmsUtils;
+import com.trunch.trunch.R;
+import com.trunch.trunch.Strings;
+import com.trunch.trunch.Urls;
+import com.trunch.trunch.utilities.RequestManger;
+import com.trunch.trunch.utilities.SharedPrefUtils;
+import com.trunch.trunch.instances.User;
+import com.trunch.trunch.utilities.AlarmsUtils;
 import com.squareup.picasso.Picasso;
 import com.squareup.picasso.Target;
 
@@ -43,9 +43,6 @@ public class MainActivity extends ActionBarActivity {
     //=========================================
 
     private static final long MIN_TIME_BETWEEN_JSON_DOWNLOAD = 1000 * 60 * 60 * 24; //one day
-
-
-
     private static final int RETRY_GET_USER = 0;
     private static final int RETRY_GET_DATA = 1;
 //    private static final String urlGetTags = "http://www.mocky.io/v2/54ba8366e7c226ad0b446eff";
@@ -75,7 +72,6 @@ public class MainActivity extends ActionBarActivity {
         mToolbar = (Toolbar)findViewById(R.id.toolbar);
         setSupportActionBar(mToolbar);
         mToolbar.setNavigationIcon(R.drawable.silver_medal);
-        mToolbar.setLogo(R.drawable.trunch_logo_small);
 
 
         // Init Fields

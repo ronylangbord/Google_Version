@@ -1,4 +1,4 @@
-package com.milab.trunch.components;
+package com.trunch.trunch.components;
 
 import android.app.Activity;
 import android.app.Dialog;
@@ -8,9 +8,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.milab.trunch.R;
-import com.milab.trunch.activities.MainActivity;
-import com.milab.trunch.activities.SecondActivity;
+import com.trunch.trunch.R;
+import com.trunch.trunch.activities.MainActivity;
 
 /**
  * Created by ronylangbord on 4/13/15.

@@ -1,6 +1,5 @@
-package com.milab.trunch.utilities;
+package com.trunch.trunch.utilities;
 
-import android.content.Context;
 import android.content.SharedPreferences;
 
 /**
