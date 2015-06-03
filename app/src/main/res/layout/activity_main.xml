@@ -1,18 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:weightSum="1"
     android:background="@drawable/background">
 
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:minHeight="?attr/actionBarSize"
-        android:background="@color/white"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-    </android.support.v7.widget.Toolbar>
+    <include
+        android:id="@+id/sa_toolbar"
+        layout="@layout/trunch_toolbar"
+        />
 
     <View
         android:id="@+id/splash_screen"
@@ -20,6 +17,29 @@
         android:layout_height="match_parent"
         android:visibility="gone"
         android:background="@drawable/background"/>
+
+
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerVertical="true"
+    android:layout_centerHorizontal="true"
+    android:id="@+id/relativeLayout">
+
+    <SearchView
+        android:id="@+id/ma_searchView"
+        android:layout_width="300dp"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:padding="3dp"
+        android:clickable="true"
+        android:background="@android:drawable/dialog_holo_light_frame"
+        android:queryHint="@string/food_prompt"
+        android:layout_alignBottom="@+id/ma_searchView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>
 
     <TextView
         android:id="@+id/titleView"
@@ -30,18 +50,10 @@
         android:textColor="@color/white"
         android:layout_gravity="center_horizontal"
         android:textSize="25sp"
-        android:layout_marginTop="200dp"
-        android:layout_marginBottom="5dp"
-         />
+        android:layout_above="@+id/relativeLayout"
+        android:layout_alignRight="@+id/relativeLayout"
+        android:layout_alignEnd="@+id/relativeLayout" />
 
-    <SearchView
-        android:id="@+id/tempView"
-        android:layout_width="300dp"
-        android:layout_gravity="center"
-        android:layout_height="wrap_content"
-        android:padding="3dp"
-        android:clickable="true"
-        android:background="@color/white"
-        android:queryHint="@string/food_prompt"/>
+</RelativeLayout>
 
-</LinearLayout>
+

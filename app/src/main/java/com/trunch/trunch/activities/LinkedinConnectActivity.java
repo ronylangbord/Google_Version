@@ -22,9 +22,9 @@ import com.linkedin.platform.listeners.AuthListener;
 import com.linkedin.platform.utils.Scope;
 import com.trunch.trunch.R;
 import com.trunch.trunch.Urls;
+import com.trunch.trunch.instances.User;
 import com.trunch.trunch.utilities.RequestManger;
 import com.trunch.trunch.utilities.SharedPrefUtils;
-import com.trunch.trunch.instances.User;
 
 import org.apache.http.NameValuePair;
 import org.apache.http.message.BasicNameValuePair;
@@ -50,7 +50,7 @@ public class LinkedinConnectActivity extends Activity{
     private static final String topCardUrl = "https://" + linkedinHost
             + "/v1/people/~:(first-name," + "last-name,headline,picture-url)?format=json";
     private static final String TAG = MainActivity.class.getSimpleName();
-    public static final String GET_PACKAGE_HASH = "com.milab.trunch";
+    public static final String GET_PACKAGE_HASH = "com.trunch.trunch";
 
     //=========================================
     //				Fields

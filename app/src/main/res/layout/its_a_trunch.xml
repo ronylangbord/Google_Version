@@ -6,6 +6,7 @@
               android:background="@drawable/background"  >
 
     <ImageView
+        android:id="@+id/la_whiteframe"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/white"
@@ -13,47 +14,15 @@
         android:layout_marginBottom="20dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:id="@+id/imageView" />
-
-    <TextView
-        android:id="@+id/meet_your_trunchers"
-        android:layout_width="280dp"
-        android:layout_height="60dp"
-        android:text="Meet your TRUNCHERS"
-        android:textSize="21dp"
-        android:textAlignment="gravity"
-        android:layout_marginTop="40dp"
-        android:textColor="@color/white"
-        android:background="@drawable/meet_your_trunches"
-        android:layout_centerHorizontal="true"
-        android:gravity="center|top" />
-
-    <Button
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:id="@+id/shuffle_button"
-        android:layout_below="@+id/meet_your_trunchers"
-        android:layout_centerInParent="true"
-        android:layout_marginTop="90dp"
-        android:background="@drawable/shuffle_button"
-        />
-
-
-    <ImageView
-        android:layout_width="200dp"
-        android:layout_height="100dp"
-        android:background="@drawable/where_and_when"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="60dp"
-        android:layout_marginLeft="80dp"/>
+         />
 
     <ImageView
         android:id="@+id/truncher1"
         android:layout_width="80dp"
         android:layout_height="90dp"
-        android:layout_marginTop="120dp"
-        android:layout_marginLeft="60dp"
-        ></ImageView>
+        android:layout_below="@+id/meet_your_trunchers"
+        android:layout_alignLeft="@+id/meet_your_trunchers"
+        android:layout_alignStart="@+id/meet_your_trunchers"></ImageView>
 
     <TextView
         android:layout_width="wrap_content"
@@ -61,18 +30,21 @@
         android:id="@+id/truncher1text"
         android:text="web designer"
         android:textAlignment="center"
-        android:layout_marginTop="220dp"
-        android:layout_marginLeft="60dp"
         android:textColor="@color/ripple_material_light"
-        />
+        android:layout_below="@+id/truncher1"
+        android:layout_alignLeft="@+id/truncher1"
+        android:layout_alignStart="@+id/truncher1"
+        android:layout_alignBottom="@+id/la_shuffle_button" />
 
     <ImageView
         android:id="@+id/truncher2"
         android:layout_width="80dp"
         android:layout_height="90dp"
-        android:layout_marginTop="120dp"
-        android:layout_marginLeft="230dp"
-        ></ImageView>
+        android:layout_alignTop="@+id/truncher1"
+        android:layout_alignRight="@+id/truncher2text"
+        android:layout_alignEnd="@+id/truncher2text">
+
+        </ImageView>
 
     <TextView
         android:layout_width="wrap_content"
@@ -80,18 +52,59 @@
         android:id="@+id/truncher2text"
         android:text="content manager"
         android:textAlignment="center"
-        android:layout_marginTop="220dp"
-        android:layout_marginLeft="230dp"
         android:textColor="@color/ripple_material_light"
-        />
+        android:layout_below="@+id/truncher2"
+        android:layout_alignRight="@+id/meet_your_trunchers"
+        android:layout_alignEnd="@+id/meet_your_trunchers"
+        android:layout_alignBottom="@+id/la_shuffle_button"
+        android:layout_toRightOf="@+id/restaurant"
+        android:layout_toEndOf="@+id/restaurant" />
 
-    <ImageView
-        android:id="@+id/restaurant"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="270dp"
-        android:layout_marginLeft="150dp"
-        />
+        <Button
+            android:id="@+id/la_shuffle_button"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/shuffle_button"
+            android:layout_below="@+id/truncher2"
+            android:layout_centerHorizontal="true">
+            </Button>
+
+
+
+        <ImageView
+            android:id="@+id/restaurant"
+            android:background="@drawable/girrafe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="43dp"
+            android:layout_below="@+id/la_shuffle_button"
+            android:layout_centerHorizontal="true" />
+
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:background="@drawable/where_and_when"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="40dp"
+            />
+
+        <TextView
+            android:id="@+id/meet_your_trunchers"
+            android:layout_width="280dp"
+            android:layout_height="70dp"
+            android:text="Meet your TRUNCHERS"
+            android:layout_marginTop="30dp"
+            android:textSize="21dp"
+            android:textAlignment="center"
+            android:gravity="center|top"
+            android:textColor="@color/white"
+            android:background="@drawable/meet_your_trunches"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true">
+            </TextView>
+
 
 
 </RelativeLayout>

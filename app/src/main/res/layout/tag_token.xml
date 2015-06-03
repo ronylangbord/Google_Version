@@ -12,15 +12,13 @@
               android:textColor="@android:color/white"
               android:textSize="20sp"
               android:text="Test Me"
+              android:layout_marginLeft="4dp"
               android:paddingLeft="3dp"
               android:paddingRight="3dp"
               android:paddingTop="2dp"
               android:paddingBottom="4dp"/>
 
-    <!--<ImageView android:layout_width="match_parent"-->
-               <!--android:layout_height="match_parent"-->
-               <!--android:src="@drawable/x_button"-->
-               <!--android:background="@drawable/token_default"-->
-            <!--/>-->
+
+
 
 </LinearLayout>

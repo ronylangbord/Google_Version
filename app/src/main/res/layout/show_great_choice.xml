@@ -21,7 +21,7 @@
         android:layout_marginBottom="50dp"
         android:layout_marginLeft="28dp"
         android:layout_alignParentBottom="true"
-        android:text="We'll let you know when you                             are getting your Trunch."
+        android:text="We'll let you know when your                             Trunch is ready."
         android:textAlignment="center"
         android:textColor="@android:color/black"
         android:textSize="16dp"

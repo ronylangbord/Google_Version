@@ -11,12 +11,13 @@ android {
     buildToolsVersion "21.1.2"
 
     defaultConfig {
-        applicationId "com.milab.trunch"
+        applicationId "com.trunch.trunch"
         minSdkVersion 15
         targetSdkVersion 21
-        versionCode 3
-        versionName "1.2"
+        versionCode 8
+        versionName "1.5.2"
     }
+
     buildTypes {
         release {
             minifyEnabled false

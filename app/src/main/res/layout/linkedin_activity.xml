@@ -19,6 +19,7 @@
     <TextView
         android:id="@+id/pckText"
         android:background="@color/blue"
+        android:textSize="18dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
@@ -27,7 +28,8 @@
         android:background="@color/red"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="50dp"/>
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="20dp"/>
 
     <View
         android:id="@+id/splash_screen_linkedin"

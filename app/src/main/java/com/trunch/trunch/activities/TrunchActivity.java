@@ -66,7 +66,7 @@ public class TrunchActivity extends ActionBarActivity {
 
         //showTrunchDialog(trunchers, restName);
 
-        shuffleButton = (Button) findViewById(R.id.shuffle_button);
+        shuffleButton = (Button) findViewById(R.id.la_shuffle_button);
         shuffleButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

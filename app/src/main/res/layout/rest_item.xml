@@ -28,9 +28,10 @@
                     android:id="@+id/imageButton"
                     android:clickable="true"
                     android:src="@drawable/agadir"
-                    android:background="#ff000000"
                     android:layout_margin="50dp"
-                    />
-
-
+                    android:background="@color/white"
+                    android:paddingLeft="3dp"
+                    android:paddingRight="3dp"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="4dp"/>
 </LinearLayout>

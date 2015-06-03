@@ -1,19 +1,33 @@
 <resources>
     <string name="app_name">Trunch</string>
-    <string name="action_settings">Trunch</string>
+    <string name="action_settings">Settings</string>
     <string name="food_prompt">Cuisine or Restaurant </string>
     <string name="main_question">What would you like to eat?</string>
     <string name="mGlass">\uD83D\uDD0D</string>
     <string name="pick_resturent">Choose a restaurant</string>
     <string name="wait_for_trunch">Waiting for your TRUNCH...</string>
     <string name="title_activity_second">SecondActivity</string>
-
     <string name="retry">Retry</string>
-
     <string name="choose_rest">Choose a restaurant</string>
-
     <string name="network_unavailable_title">Network Unavailable!</string>
     <string name="network_unavailable_message">Sorry there was an error getting data from the Internet.</string>
+    <string name="action_search">Search</string>
+    <string name="drawer_open">Open</string>
+    <string name="drawer_close">Close</string>
+    <string name="nav_item_home">Home</string>
+    <string name="nav_item_friends">Friends</string>
+    <string name="nav_item_notifications">Messages</string>
+
+    <!-- navigation drawer item labels  -->
+    <string-array name="nav_drawer_labels">
+        <item>@string/nav_item_home</item>
+        <item>@string/nav_item_friends</item>
+        <item>@string/nav_item_notifications</item>
+    </string-array>
+
+    <string name="title_messages">Messages</string>
+    <string name="title_friends">Friends</string>
+    <string name="title_home">Home</string>
 
 
 

@@ -14,6 +14,8 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
@@ -73,18 +75,18 @@ public class SecondActivity extends ActionBarActivity implements TokenCompleteTe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.second_activity_1);
+        setContentView(R.layout.second_activity);
 
 
-        mToolbar = (Toolbar)findViewById(R.id.toolbar);
+        mToolbar = (Toolbar)findViewById(R.id.sa_toolbar);
         setSupportActionBar(mToolbar);
         mToolbar.setNavigationIcon(R.drawable.silver_medal);
-        mToolbar.setLogo(R.drawable.trunch_logo_small);
+
         mUser = (User) getIntent().getParcelableExtra(Strings.user);
         loadUserImage();
         // Init Fields
         mSharedPreferences = getSharedPreferences(SharedPrefUtils.SHARED_PREF_NAME, Context.MODE_PRIVATE);
-        mTagsCompletionView = (TagsCompletionView) findViewById(R.id.searchView);
+        mTagsCompletionView = (TagsCompletionView) findViewById(R.id.sa_searchView);
         mRestContainer = (HorizontialListView) findViewById(R.id.restContainer);
         mMapper = new ObjectMapper();
         mInputManger = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
@@ -97,6 +99,25 @@ public class SecondActivity extends ActionBarActivity implements TokenCompleteTe
 
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+            // Handle action bar item clicks here. The action bar will
+            // automatically handle clicks on the Home/Up button, so long
+            // as you specify a parent activity in AndroidManifest.xml.
+            int id = item.getItemId();
+
+            //noinspection SimplifiableIfStatement
+            if (id == R.id.action_settings) {
+                return true;
+            }
+            return super.onOptionsItemSelected(item);
+        }
 
 
     //=========================================

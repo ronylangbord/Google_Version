@@ -14,21 +14,22 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.SearchView;
 import android.widget.TextView;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.squareup.picasso.Picasso;
+import com.squareup.picasso.Target;
 import com.trunch.trunch.R;
 import com.trunch.trunch.Strings;
 import com.trunch.trunch.Urls;
-import com.trunch.trunch.utilities.RequestManger;
-import com.trunch.trunch.utilities.SharedPrefUtils;
 import com.trunch.trunch.instances.User;
 import com.trunch.trunch.utilities.AlarmsUtils;
-import com.squareup.picasso.Picasso;
-import com.squareup.picasso.Target;
+import com.trunch.trunch.utilities.RequestManger;
+import com.trunch.trunch.utilities.SharedPrefUtils;
 
 import org.apache.http.NameValuePair;
 import org.apache.http.message.BasicNameValuePair;
@@ -69,16 +70,17 @@ public class MainActivity extends ActionBarActivity {
         setContentView(R.layout.activity_main);
 
 
-        mToolbar = (Toolbar)findViewById(R.id.toolbar);
+        mToolbar = (Toolbar)findViewById(R.id.sa_toolbar);
         setSupportActionBar(mToolbar);
-        mToolbar.setNavigationIcon(R.drawable.silver_medal);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+       // mToolbar.setNavigationIcon(R.drawable.silver_medal);
 
 
         // Init Fields
         mSharedPreferences = getSharedPreferences(SharedPrefUtils.SHARED_PREF_NAME, Context.MODE_PRIVATE);
         mSplashScreenView = findViewById(R.id.splash_screen);
         mTitleView = (TextView) findViewById(R.id.titleView);
-        mTempView = (SearchView) findViewById(R.id.tempView);
+        mTempView = (SearchView) findViewById(R.id.ma_searchView);
         mMapper = new ObjectMapper();
         robotoFont  = Typeface.createFromAsset(getAssets(), "Roboto-Regular.ttf");
 
@@ -107,8 +109,25 @@ public class MainActivity extends ActionBarActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        return super.onCreateOptionsMenu(menu);
+
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
     }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.action_settings) {
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
 
     private void restOfTheActivity() {
         loadUserImage();
@@ -128,8 +147,6 @@ public class MainActivity extends ActionBarActivity {
     }
 
 
-
-
     //=========================================
     //				Private Methods
     //=========================================
@@ -142,7 +159,7 @@ public class MainActivity extends ActionBarActivity {
                 ImageView imageView = new ImageView(getApplicationContext());
                 imageView.setImageBitmap(bitmap);
                 Drawable image = imageView.getDrawable();
-                mToolbar.setNavigationIcon(image);
+                mToolbar.setLogo(image);
             }
 
             @Override
