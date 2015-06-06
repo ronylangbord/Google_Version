@@ -1,5 +1,7 @@
 package com.trunch.trunch.activities;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.View;
@@ -14,6 +16,7 @@ import com.trunch.trunch.instances.User;
 import com.trunch.trunch.components.ShuffleDialogClass;
 import com.trunch.trunch.components.TrunchDialogClass;
 import com.squareup.picasso.Picasso;
+import com.trunch.trunch.utilities.SharedPrefUtils;
 
 import java.io.IOException;
 
@@ -40,6 +43,7 @@ public class TrunchActivity extends ActionBarActivity {
     private ImageView m_ChosenRest;
     private String m_FirstTruncherImageUrl;
     private String m_SecondTruncherImageUrl;
+    SharedPreferences mSharedPreferences;
 
 
     //=========================================
@@ -51,10 +55,13 @@ public class TrunchActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.its_a_trunch);
 
+        mSharedPreferences = getSharedPreferences(SharedPrefUtils.SHARED_PREF_NAME, Context.MODE_PRIVATE);
+        SharedPrefUtils.UpdateTrunchResult(mSharedPreferences, "No Trunch","No Trunch", false);
+
         mObjectMapper = new ObjectMapper();
 
-        restName = getIntent().getStringExtra(Strings.restName);
-        trunchersString = getIntent().getStringExtra(Strings.trunchers);
+        restName = SharedPrefUtils.getChosenRest(mSharedPreferences);
+        trunchersString = SharedPrefUtils.getTrunchers(mSharedPreferences);
         mUser = (User) getIntent().getParcelableExtra(Strings.user);
 
         User[] trunchers = new User[0];

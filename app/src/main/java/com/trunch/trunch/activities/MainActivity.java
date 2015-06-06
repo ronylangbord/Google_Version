@@ -16,8 +16,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.SearchView;
 import android.widget.TextView;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -56,7 +56,7 @@ public class MainActivity extends ActionBarActivity {
     SharedPreferences mSharedPreferences;
     View mSplashScreenView;
     TextView mTitleView;
-    SearchView mTempView;
+    EditText mToNextActivityView;
     Typeface robotoFont;
     User mUser;
     Toolbar mToolbar;
@@ -70,6 +70,7 @@ public class MainActivity extends ActionBarActivity {
         setContentView(R.layout.activity_main);
 
 
+
         mToolbar = (Toolbar)findViewById(R.id.sa_toolbar);
         setSupportActionBar(mToolbar);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
@@ -80,9 +81,10 @@ public class MainActivity extends ActionBarActivity {
         mSharedPreferences = getSharedPreferences(SharedPrefUtils.SHARED_PREF_NAME, Context.MODE_PRIVATE);
         mSplashScreenView = findViewById(R.id.splash_screen);
         mTitleView = (TextView) findViewById(R.id.titleView);
-        mTempView = (SearchView) findViewById(R.id.ma_searchView);
+        mToNextActivityView = (EditText) findViewById(R.id.ma_searchView);
         mMapper = new ObjectMapper();
         robotoFont  = Typeface.createFromAsset(getAssets(), "Roboto-Regular.ttf");
+
 
         // set daily reminder
         AlarmsUtils.setReminderAlarm(this);
@@ -104,6 +106,7 @@ public class MainActivity extends ActionBarActivity {
             new GetUserAsync().execute(Urls.USER_CONNECT);
         }
     }
+
 
 
 
@@ -130,6 +133,10 @@ public class MainActivity extends ActionBarActivity {
 
 
     private void restOfTheActivity() {
+        // If has trunch already show trunch
+        if(SharedPrefUtils.hasTrunch(mSharedPreferences)){
+            showTrunch();
+        }
         loadUserImage();
         long lastTimeDownloaded = SharedPrefUtils.lastTimeDownloaded(mSharedPreferences);
         long timeDifference = System.currentTimeMillis() - lastTimeDownloaded;
@@ -177,7 +184,7 @@ public class MainActivity extends ActionBarActivity {
     }
 
     private void initTempView() {
-        mTempView.setOnClickListener(new View.OnClickListener() {
+        mToNextActivityView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), SecondActivity.class);
@@ -188,6 +195,8 @@ public class MainActivity extends ActionBarActivity {
         });
 
     }
+
+
 
 
 
@@ -219,6 +228,13 @@ public class MainActivity extends ActionBarActivity {
                 linkedinConnect();
             }
         }
+    }
+
+    private void showTrunch() {
+        Intent intent = new Intent(getApplicationContext(), TrunchActivity.class);
+        intent.putExtra(Strings.user, mUser);
+        startActivity(intent);
+        finish();
     }
 
     //=========================================

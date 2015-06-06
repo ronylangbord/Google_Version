@@ -55,7 +55,7 @@ public class GreatChoiceDialog extends Dialog implements View.OnClickListener {
                 break;
         }
         dismiss();
-        c.finish();
+        c.moveTaskToBack(true);
     }
 
 }

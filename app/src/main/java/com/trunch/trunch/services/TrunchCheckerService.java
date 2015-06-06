@@ -63,7 +63,7 @@ public class TrunchCheckerService extends BroadcastReceiver {
     }
 
     private void showNotification(Context context) {
-        mBuilder = new NotificationCompat.Builder(context).setSmallIcon(R.drawable.trunch_logo_small)
+        mBuilder = new NotificationCompat.Builder(context).setSmallIcon(R.drawable.applogo1)
                  .setContentTitle("You have a Trunch!").setContentText("Find out who you are eating lunch with.");
         // The PendingIntent to launch our activity if the user selects this
         // notification
@@ -109,9 +109,9 @@ public class TrunchCheckerService extends BroadcastReceiver {
         }
 
         @Override
-        protected void onPostExecute(String response) {
-            if (response != null) {
-                SharedPrefUtils.UpdateTrunchResult(mSharedPreferences,response);
+        protected void onPostExecute(String trunchers) {
+            if (trunchers != null) {
+                SharedPrefUtils.UpdateTrunchResult(mSharedPreferences,trunchers ,mRestName ,true);
             }
         }
     }

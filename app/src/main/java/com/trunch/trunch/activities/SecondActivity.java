@@ -106,6 +106,15 @@ public class SecondActivity extends ActionBarActivity implements TokenCompleteTe
     }
 
     @Override
+    protected void onResume() {
+        super.onResume();
+        // If has trunch already show trunch
+        if(SharedPrefUtils.hasTrunch(mSharedPreferences)){
+            showTrunch();
+        }
+    }
+
+    @Override
     public boolean onOptionsItemSelected(MenuItem item) {
             // Handle action bar item clicks here. The action bar will
             // automatically handle clicks on the Home/Up button, so long
@@ -123,6 +132,12 @@ public class SecondActivity extends ActionBarActivity implements TokenCompleteTe
     //=========================================
     //				Private Methods
     //=========================================
+    private void showTrunch() {
+        Intent intent = new Intent(getApplicationContext(), TrunchActivity.class);
+        intent.putExtra(Strings.user, mUser);
+        startActivity(intent);
+        finish();
+    }
 
     private void loadUserImage() {
         Target target = new Target() {

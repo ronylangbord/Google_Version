@@ -14,6 +14,7 @@ public class SharedPrefUtils {
     public static final String SHARED_PREF_USER_ID = "com.package.SHARED_PREF_USER_ID";
     public static final String SHARED_PREF_HAS_TRUNCH = "com.package.SHARED_PREF_HAS_TRUNCH";
     public static final String SHARED_PREF_TRUNCHERS = "com.package.SHARED_PREF_TRUNCHERS";
+    public static final String SHARED_PREF_CHOSEN_REST = "com.package.SHARED_CHOSEN_REST";
 
 
     public static boolean hasTrunch(SharedPreferences mSharedPreferences) {
@@ -24,6 +25,10 @@ public class SharedPrefUtils {
         return mSharedPreferences.getString(SHARED_PREF_TRUNCHERS, "No One!!");
     }
 
+    public static String getChosenRest (SharedPreferences mSharedPreferences) {
+        return mSharedPreferences.getString(SHARED_PREF_CHOSEN_REST, "No One!!");
+    }
+
     public static String getRests(SharedPreferences mSharedPreferences) {
         return mSharedPreferences.getString(SHARED_PREF_KEY_RESTAURANT, "{'empty' : empty}");
     }
@@ -32,10 +37,14 @@ public class SharedPrefUtils {
         return mSharedPreferences.getString(SHARED_PREF_KEY_FOOD_TAGS, "{'empty' : empty}");
     }
 
-    public static void UpdateTrunchResult(SharedPreferences mSharedPreferences, String trunchers) {
+    public static void UpdateTrunchResult(SharedPreferences mSharedPreferences, String trunchers,
+                                          String chosenRest,boolean hasTrunch) {
         SharedPreferences.Editor edit = mSharedPreferences.edit();
-        edit.putBoolean(SHARED_PREF_HAS_TRUNCH, true);
-        edit.putString(SHARED_PREF_TRUNCHERS, trunchers);
+        edit.putBoolean(SHARED_PREF_HAS_TRUNCH, hasTrunch);
+        if(hasTrunch) {
+            edit.putString(SHARED_PREF_CHOSEN_REST, chosenRest);
+            edit.putString(SHARED_PREF_TRUNCHERS, trunchers);
+        }
         edit.commit();
     }
 

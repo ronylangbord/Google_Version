@@ -29,12 +29,12 @@ public class TrunchReminderService extends BroadcastReceiver {
 
     @Override
     public void onReceive(Context context, Intent intent) {
-        showNotification(context);
+       showNotification(context);
     }
 
 
     private void showNotification(Context context) {
-        mBuilder = new NotificationCompat.Builder(context).setSmallIcon(R.drawable.trunch_logo_small)
+        mBuilder = new NotificationCompat.Builder(context).setSmallIcon(R.drawable.applogo1)
                 .setContentTitle("It's Trunch time!").setContentText("Have you decided what to eat for lunch?");
         // The PendingIntent to launch our activity if the user selects this
         // notification
